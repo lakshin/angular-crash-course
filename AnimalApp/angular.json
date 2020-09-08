@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "AnimalApp"
+    }
+  },
+  "defaultProject": "AnimalApp",
+  "cli": {
+    "analytics": false
+  }
 }
