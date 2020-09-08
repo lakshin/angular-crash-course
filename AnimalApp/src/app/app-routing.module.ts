@@ -11,7 +11,8 @@ import { LoginComponent } from './login/login/login.component';
 const routes: Routes = [
   {path: '',  redirectTo: 'login', pathMatch: 'full'},
   {path: 'animal', loadChildren: () => AnimalModule, canLoad: [AuthGuard]},
-  {path: 'login', component: LoginComponent}
+  {path: 'login', component: LoginComponent},
+  {path: '**', redirectTo: 'login'}
 ];
 
 @NgModule({
