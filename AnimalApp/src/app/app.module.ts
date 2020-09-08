@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AnimalModule } from './animal/animal.module';
+import { LoginModule } from './login/login.module';
 
 @NgModule({
   declarations: [
@@ -12,7 +13,8 @@ import { AnimalModule } from './animal/animal.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    AnimalModule
+    AnimalModule,
+    LoginModule
   ],
   providers: [],
   bootstrap: [AppComponent]

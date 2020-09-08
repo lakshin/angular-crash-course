@@ -1,0 +1,14 @@
+$base-color: #c65353;
+$base-text-color: #fff;
+
+.navbar{ 
+    justify-content: center;  
+    background-color: $base-color;   
+}
+
+.navbar-brand{
+    color: $base-text-color;
+}
+.nav-link{
+    color: $base-text-color !important;
+}

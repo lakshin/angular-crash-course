@@ -1,0 +1,26 @@
+<div class="m-5">
+  <!--Logged In-->
+  <div *ngIf="identitySvc.loggedIn" class="card-body">
+      <button (click)="logout()" class="btn btn-primary my-1">Logout</button>
+  </div>
+  <!--Not Logged In-->
+  <div *ngIf="!identitySvc.loggedIn">
+    <form [formGroup]="loginForm" (ngSubmit)="onLogin()">
+      <div class="form-group">
+        <label for="uname">Username:</label>
+        <input type="text" class="form-control" formControlName="username" placeholder="Enter username">
+        <div *ngIf="username.invalid && username.errors.required && (username.dirty || username.touched)" class="invalid-feedback d-block">
+          Username is required.
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="pwd">Password:</label>
+        <input type="password" class="form-control" formControlName="password" placeholder="Enter password">
+        <div *ngIf="password.invalid && (password.dirty || password.touched) && password.errors.required" class="invalid-feedback d-block">
+          Password is required.
+        </div>
+      </div>
+      <button type="submit" [disabled]="!loginForm.valid" class="btn btn-primary">Submit</button>
+    </form>
+  </div>
+</div>

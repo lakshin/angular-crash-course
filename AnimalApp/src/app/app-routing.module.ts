@@ -5,9 +5,12 @@ import { Routes, RouterModule } from '@angular/router';
 import {AnimalComponent} from './animal/animal.component';
 import {AnimalModule} from './animal/animal.module';
 
+import { LoginComponent } from './login/login/login.component';
+
 const routes: Routes = [
-  {path: '',  redirectTo: 'animal', pathMatch: 'full'},
-  {path: 'animal',  component: AnimalComponent, loadChildren: () => AnimalModule}
+  {path: '',  redirectTo: 'login', pathMatch: 'full'},
+  {path: 'animal',  component: AnimalComponent, loadChildren: () => AnimalModule},
+  {path: 'login', component: LoginComponent}
 ];
 
 @NgModule({

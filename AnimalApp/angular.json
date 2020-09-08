@@ -27,7 +27,8 @@
               "src/favicon.ico",
               "src/assets"
             ],
-            "styles": [
+            "styles": [              
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.scss"
             ],
             "scripts": []
@@ -123,6 +124,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "AnimalApp"
+    }
+  },
+  "defaultProject": "AnimalApp",
+  "cli": {
+    "analytics": false
+  }
 }
