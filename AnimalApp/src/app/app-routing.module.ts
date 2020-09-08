@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { AuthGuard } from './auth/auth.guard';
 
 //modules
 import {AnimalModule} from './animal/animal.module';
@@ -9,7 +10,7 @@ import { LoginComponent } from './login/login/login.component';
 
 const routes: Routes = [
   {path: '',  redirectTo: 'login', pathMatch: 'full'},
-  {path: 'animal', loadChildren: () => AnimalModule},
+  {path: 'animal', loadChildren: () => AnimalModule, canLoad: [AuthGuard]},
   {path: 'login', component: LoginComponent}
 ];
 
