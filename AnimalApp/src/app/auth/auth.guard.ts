@@ -13,10 +13,9 @@ export class AuthGuard implements CanLoad {
   canLoad(
     route: Route,
     segments: UrlSegment[]): Observable<boolean> | Promise<boolean> | boolean {
-      /*if (!this.identitySvc.loggedIn){
+      if (!this.identitySvc.loggedIn){
         this.router.navigate(['/']); // open issue
       }
-      return this.identitySvc.loggedIn;*/
-      return true;
+      return this.identitySvc.loggedIn;
   }
 }
