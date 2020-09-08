@@ -1,6 +1,8 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
-import { IdentityService } from '../identity.service';
 import { Validators, FormGroup, FormBuilder, AbstractControl } from '@angular/forms';
+import { Router } from '@angular/router';
+
+import { IdentityService } from '../identity.service';
 
 @Component({
   selector: 'app-login',
@@ -21,7 +23,7 @@ export class LoginComponent implements OnInit {
     });
   }*/
 
-  constructor(public identitySvc: IdentityService, private fb: FormBuilder) { }
+  constructor(public identitySvc: IdentityService, private fb: FormBuilder, private router: Router) { }
 
   ngOnInit(): void {
     this.loginForm = this.createLoginForm();
@@ -37,10 +39,16 @@ export class LoginComponent implements OnInit {
   onLogin(): void{
     this.identitySvc.loggedIn = true;
     this.identitySvc.username = this.username.value;
+
+    this.routeToAnimal();
   }
 
   logout(): void{
     this.identitySvc.loggedIn = false;
     this.identitySvc.username = null;
+  }
+
+  private routeToAnimal(): void{
+    this.router.navigate(['/animal']);
   }
 }
