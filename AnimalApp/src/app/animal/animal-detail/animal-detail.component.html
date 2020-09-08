@@ -1,0 +1,12 @@
+<div class="container" *ngIf="dog">
+
+    <h1 class="my-4">Animal Details
+      <small>{{dog.name}}</small>
+    </h1>  
+
+    <div class="row">   
+      <div class="col-md-8">       
+        <h4 class="my-3">Breed group: {{dog.breed_group}}</h4>
+        <h4 class="my-3">Life span: {{dog.life_span}}</h4>
+        <h4 class="my-3">Origin: {{dog.origin}}</h4>
+    </div>

@@ -1,1 +1,9 @@
-<p>animal-home works!</p>
+<div class="column-double">
+    <app-animal-list (dogIdChange)="DogIdChange($event)"></app-animal-list>
+  </div>
+  <div class="column">
+    <app-animal-detail [dogId]="dogId"></app-animal-detail>
+  </div>
+  <div class="column border-right">
+    <app-animal-image [dogId]="dogId"></app-animal-image>
+  </div>

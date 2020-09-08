@@ -7,9 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AnimalHomeComponent implements OnInit {
 
-  constructor() { }
+  public dogId: number;
+  constructor() {
+  }
 
   ngOnInit(): void {
   }
 
+  DogIdChange(dogId: number): void {
+    this.dogId = dogId;
+  }
 }

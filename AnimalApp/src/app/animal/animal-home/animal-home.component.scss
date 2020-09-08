@@ -1,0 +1,24 @@
+ $border_color: #000;
+
+ .column {
+    height: 45%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    float: right;
+    border-top: 1px solid $border_color;
+  }
+  .column-double {
+    height: 45%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    float: right;
+    border-bottom: 1px solid $border_color;
+  }
+
+  .border-right {
+    border-right: 2px solid $border_color !important;
+  }

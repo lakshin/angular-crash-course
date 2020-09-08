@@ -1,0 +1,7 @@
+<div class="container list-container">
+    <div>
+        <div class="list-group" *ngFor="let dogbreed of dogBreeds; let i = index">
+            <a (click)="loadData(dogbreed.id)" class="list-group-item list-group-item-action">{{dogbreed.name}}</a>
+        </div>
+    </div>
+</div>
